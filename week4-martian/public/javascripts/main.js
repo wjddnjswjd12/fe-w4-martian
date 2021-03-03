@@ -1,3 +1,3 @@
-import { drawCanvas } from "./canvas/drawCanvas.js";
+import { hexaToDec } from "./convert/converter.js";
 
-drawCanvas();
+console.log(hexaToDec("1D"));
