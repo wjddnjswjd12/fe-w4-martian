@@ -26,4 +26,8 @@ const hexaLetterToNum = (char) => {
   }
 };
 
-export { hexaToDec, hexaLetterToNum };
+const numToASCII = (num) => {
+  return String.fromCharCode(num);
+};
+
+export { hexaToDec, hexaLetterToNum, numToASCII };
