@@ -1,4 +1,4 @@
-import { hexaLetterToNum, hexaToDec, numToASCII } from "./convert/converter.js";
+import { hexaToDec, numToASCII } from "./convert/converter.js";
 import { _ } from "./utils.js";
 
 let testing = "";
