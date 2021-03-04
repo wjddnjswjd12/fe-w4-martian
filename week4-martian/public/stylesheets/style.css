@@ -32,6 +32,7 @@
   border-radius: 70%;
   top: 175px;
   left: 175px;
+  transform: rotate(11.25deg);
 }
 
 .inner__pie::after {
