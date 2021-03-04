@@ -2,6 +2,7 @@ import { _, hexaDecimal } from "./utils.js";
 
 //시작위치를 정하기 위해 좀 쉽게 하려고 0쪽으로 살짝 돌린 상태에서 시작하는걸로 했습니다.
 const rouletteState = {
+  startDeg: 11.25,
   currentDeg: 11.25,
   currentIndex: 0,
 };
@@ -13,7 +14,6 @@ const movePointer = (letter) => {
     ? Number(letter)
     : hexaDecimal.findIndex((element) => element === letter.toUpperCase());
 
-  console.log(nextIndex);
   let diff = nextIndex - rouletteState.currentIndex;
   let diffAbs = Math.abs(diff);
   if (diffAbs <= 7) {
