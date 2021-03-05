@@ -20,7 +20,7 @@
   height: 500px;
   border-radius: 70%;
   overflow: hidden;
-  border: 3px solid black;
+  border: 3px solid #000;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }
 
@@ -32,6 +32,7 @@
   border-radius: 70%;
   top: 175px;
   left: 175px;
+  transform: rotate(11.25deg);
 }
 
 .inner__pie::after {
@@ -64,38 +65,38 @@
   top: 0%;
   border-right: black solid 3px;
 }
-#slice .pie__slice__hold {
+.pie__slice__container[data-index="0"] .pie__slice__hold {
   transform: rotate(calc(var(--slice-degree) * 0));
 }
 
-#slice .pie__slice__hold .pie__slice {
+.pie__slice__container[data-index="0"] .pie__slice__hold .pie__slice {
   border: none;
 }
 
-#slice1 .pie__slice__hold {
+.pie__slice__container[data-index="1"] .pie__slice__hold {
   transform: rotate(calc(var(--slice-degree) * 1));
 }
 
-#slice2 .pie__slice__hold {
+.pie__slice__container[data-index="2"] .pie__slice__hold {
   transform: rotate(calc(var(--slice-degree) * 2));
 }
 
-#slice3 .pie__slice__hold {
+.pie__slice__container[data-index="3"] .pie__slice__hold {
   transform: rotate(calc(var(--slice-degree) * 3));
 }
-#slice4 .pie__slice__hold {
+.pie__slice__container[data-index="4"] .pie__slice__hold {
   transform: rotate(calc(var(--slice-degree) * 4));
 }
-#slice5 .pie__slice__hold {
+.pie__slice__container[data-index="5"] .pie__slice__hold {
   transform: rotate(calc(var(--slice-degree) * 5));
 }
-#slice6 .pie__slice__hold {
+.pie__slice__container[data-index="6"] .pie__slice__hold {
   transform: rotate(calc(var(--slice-degree) * 6));
 }
-#slice7 .pie__slice__hold {
+.pie__slice__container[data-index="7"] .pie__slice__hold {
   transform: rotate(calc(var(--slice-degree) * 7));
 }
-#slice8 .pie__slice__hold {
+.pie__slice__container[data-index="8"] .pie__slice__hold {
   transform: rotate(calc(var(--slice-degree) * 8));
 }
 
@@ -133,8 +134,8 @@
 
 .message button {
   background: #2c80ff;
-  color: white;
-  border: 2px solid black;
+  color: #fff;
+  border: 2px solid #000;
   width: 100px;
   height: 35px;
   border-radius: 6px;
