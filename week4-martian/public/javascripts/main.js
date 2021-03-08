@@ -19,18 +19,22 @@ interpreteBtn.addEventListener("click", () => {
     .join("");
 });
 
-async function startMove(arr) {
-  const waitTime = (s) =>
-    new Promise((resolve) => setTimeout(() => resolve(), s * 1000));
-
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === " ") {
-      receiveInput.value += arr[i];
-      await waitTime(0.5);
+function startMove(arr) {
+  const delay = (i, s) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        receiveInput.value += i;
+        movePointer(i);
+        resolve();
+      }, s * 1000);
+    });
+  };
+  let p = Promise.resolve();
+  for (let i of arr) {
+    if (i === " ") {
+      p = p.then(() => delay(i, 0.5));
     } else {
-      receiveInput.value += arr[i];
-      movePointer(arr[i]);
-      await waitTime(2);
+      p = p.then(() => delay(i, 2));
     }
   }
 }
