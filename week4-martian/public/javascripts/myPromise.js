@@ -47,20 +47,3 @@ class MyPromise {
     this.cbFuncsChained.forEach((cb) => cb());
   }
 }
-
-let pr = new MyPromise();
-
-const delay = () => {
-  return new MyPromise((resolve, reject) => {
-    setTimeout(() => {
-      console.log("hi");
-      resolve("Jenny");
-    }, 2000);
-  });
-};
-
-const test1 = new MyPromise((resolve, reject) => {
-  setTimeout(() => {
-    resolve({ name: "Success!" });
-  }, 2000);
-}).then((result) => console.log(result));
