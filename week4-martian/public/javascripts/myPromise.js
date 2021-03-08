@@ -10,14 +10,11 @@ class MyPromise {
     }
   }
   then(callback) {
-    //promise의 상태를 구분하여 동작한다 를 생각해보자
-
     if (this.state === "pending") {
       //resolve하고 전한 첫번째 promise가 this가 된다..
       return new MyPromise((resolve) => {
         this.cbFuncsChained.push(() => resolve(callback(this.value)));
       });
-      return this;
       //프라미스 그대로 반환. 그럼 다음 this는 같은 플로우로 두번째 프라미스겠지?
     }
 
